@@ -1,0 +1,9 @@
+[
+    {"Categorias":[
+            { "id": 0, "categoria": "Alimento" },
+            { "id": 1, "categoria": "Camas & Banhos" },
+            { "id": 2, "categoria": "HotFluir" },
+            { "id": 3, "categoria": "Frios e Gelados" },
+            { "id": 4, "categoria": "Bebidas" }
+     ]}
+]

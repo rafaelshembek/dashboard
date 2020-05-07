@@ -1,0 +1,1 @@
+var main = angular.module('inicioApp', ['ngRoute', 'angularFileUpload']);
