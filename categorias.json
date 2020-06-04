@@ -1,9 +1,19 @@
 [
     {"Categorias":[
             { "id": 0, "categoria": "Alimento" },
-            { "id": 1, "categoria": "Camas & Banhos" },
+            { "id": 1, "categoria": "Camas, Mesa e Banho" },
             { "id": 2, "categoria": "HotFluir" },
             { "id": 3, "categoria": "Frios e Gelados" },
-            { "id": 4, "categoria": "Bebidas" }
+            { "id": 4, "categoria": "Bebidas" },
+            { "id": 5, "categoria": "Tv e Vídeo" },
+            { "id": 6, "categoria": "Telefones e Celulares" },
+            { "id": 7, "categoria": "Informática" },
+            { "id": 8, "categoria": "Games" },
+            { "id": 9, "categoria": "Utilidades Domésticas" },
+            { "id": 10, "categoria": "Bebês" },
+            { "id": 11, "categoria": "Papelaria" },
+            { "id": 12, "categoria": "Produtos de Limpeza" },
+            { "id": 13, "categoria": "Artigos para Festas" },
+            { "id": 14, "categoria": "Decoração" }
      ]}
 ]

@@ -3,11 +3,12 @@
     require_once('../config/config.php');
 
 
-    $dados = $config->prepare("SELECT * FROM marketplace.produtos");
+    // $sql = "SELECT * FROM produtos";
+
+    $dados = $config->prepare("SELECT * FROM marketplace.produtos JOIN marketplace.categoria ON marketplace.produtos.categoria = marketplace.categoria.id_categoria");
     $dados->execute();
     $result = $dados->fetchAll();
     $config = null;
-
-    // print_r($result);
-    echo json_encode($result);
+    
+    echo json_encode($result, JSON_PRETTY_PRINT);
 ?>

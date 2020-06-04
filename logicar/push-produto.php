@@ -2,6 +2,7 @@
     header('Content-Type: text/html');
     require_once('../config/config.php');
     require_once('../class/cl_tratamento_produtos.php');
+    // require_once('../class/cd_categoria.php');
     require_once('../class/tratamento-input.php');
     require_once('./getter_id_maximo.php');
     require_once('../teste.php');
@@ -11,8 +12,7 @@
         CreatePath::Path('../imgs/');
         // nome do produto
         $produtos = filter_input(INPUT_POST, 'produto', FILTER_SANITIZE_STRING);
-        // descrição do produto
-        $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
+        
         // codigo de barra do produto
         $codigBarra = filter_input(INPUT_POST, 'codigodebarra', FILTER_SANITIZE_STRING);
         // categoria do produto
@@ -21,9 +21,10 @@
         $preco = filter_input(INPUT_POST, 'preco', FILTER_SANITIZE_STRING);
         // image do produto
         $file = $_FILES['file'];
+
         
         $nomeProdutop = TratarInput::Input($produtos);
-        $descricaoProduto = TratarInput::Input($descricao);
+        // $descricaoProduto = TratarInput::Input($descricao);
         $categoriaProduto = TratarInput::Input($categoria);
         $codigoBarraProduto = TratarInput::Input($codigBarra);
         $new_preco = TratarInput::Input($preco);
@@ -36,13 +37,9 @@
 
         $id = ProximoId::Get_Id_Proximo($config);
 
-        $params = array($id, $nomeProdutop, $descricaoProduto, $categoriaProduto, $codigoBarraProduto, $new_preco, $img);
-        
-        echo '<pre>';
-        print_r($params);
-        echo '</pre>';
+        $params = array($id, $nomeProdutop, $categoriaProduto, $codigoBarraProduto, $new_preco, $img);        
 
-        $getDados = $config->prepare("INSERT INTO marketplace.produtos VALUES( ?, ?, ?, ?, ?, ?, ? )");
+        $getDados = $config->prepare("INSERT INTO marketplace.produtos VALUES( ?, ?, ?, ?, ?, ? )");
         $getDados->execute($params);
         $config = null;
 

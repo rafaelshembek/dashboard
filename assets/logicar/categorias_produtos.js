@@ -1,10 +1,12 @@
-main.controller('sendProdutos', function($scope, $http, FileUploader){
-    $http({
-        url: 'categorias.json',
-        method: 'GET'
-    }).then( (result) => {
-        $scope.Categoria = result.data[0].Categorias;
+main.controller('sendProdutos', function($scope, $http, sendFactoryProduct){
+
+    const categorias = sendFactoryProduct.getProdutos('logicar/getCategoria.php', 'GET');
+    
+    categorias.then( (result) => {
+        // console.log(result.data);
+        $scope.Categoria = result.data;
     }, (error) => {
         console.log(`Error => ${error}`);
     } )
+
 })
