@@ -10,7 +10,7 @@
   "author": "antonio rafael da silva gomes",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.7.9",
+    "angular": "^1.8.0",
     "angular-file-upload": "^2.5.0",
     "angular-route": "^1.7.9",
     "angular-socket-io": "^0.7.0",
