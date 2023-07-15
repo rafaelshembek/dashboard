@@ -2,8 +2,8 @@
 
 define('BD_HOST', "localhost");
 define('BD_NAME', "marketplace");
-define('BD_USER', "rafaelshembek");
-define('BD_PASSWORD', "rafael159");
+define('BD_USER', "username");
+define('BD_PASSWORD', "passworld");
 
 
 
